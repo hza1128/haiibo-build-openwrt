@@ -8,6 +8,8 @@ sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/files/bin/config_gener
 
 # TTYD 免登录
 sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
+# 添加软件源
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
 # 移除要替换的包+
 rm -rf feeds/packages/utils/v2dat

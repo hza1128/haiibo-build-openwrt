@@ -9,6 +9,13 @@ sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/files/bin/config_gener
 # TTYD 免登录
 sed -i 's|/bin/login|/bin/login -f root|g' feeds/packages/utils/ttyd/files/ttyd.config
 
+# istoreos风格源
+echo >> feeds.conf.default
+echo 'src-git istore https://github.com/linkease/istore;main' >> feeds.conf.default
+echo >> feeds.conf.default
+echo 'src-git nas https://github.com/linkease/nas-packages.git;master' >> feeds.conf.default
+echo 'src-git nas_luci https://github.com/linkease/nas-packages-luci.git;main' >> feeds.conf.default
+
 # 移除要替换的包+
 rm -rf feeds/packages/utils/v2dat
 rm -rf feeds/packages/lang/golang

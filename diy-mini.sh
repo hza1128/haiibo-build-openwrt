@@ -32,7 +32,6 @@ function git_sparse_clone() {
 
 # 添加额外插件
 git clone --depth=1 https://github.com/kongfl888/luci-app-adguardhome package/luci-app-adguardhome
-git clone --depth=1 https://github.com/arenekosreal/luci-app-nginx package/luci-app-nginxer
 
 # 科学上网插件
 git clone --depth=1 https://github.com/fw876/helloworld package/luci-app-ssr-plus
